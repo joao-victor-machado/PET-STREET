@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adoção de Animais</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Tela Inicial -->
+<div id="splash-screen">
+  <h1>Bem-vindo ao pet street</h1>
+  <h2> Pois cada animal merece amor e carinho </h2>
+  <button onclick="startSite()">Adote um animal!</button>
+</div>
+
+<!-- Conteúdo do site -->
+<main>
+  <header>
+    <div class="logo">Adote um Amigo</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#adopt">Adote</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="login-btn" onclick="openModal()">Login</button>
+  </header>
+
+  <section class="banner">
+    <h1>Encontre seu mais novo companion!</h1>
+    <p>Adote, e ajude aqueles que serão eternamente fiéis a você.</p>
+    <a href="#adopt" class="btn">Veja os Animais</a>
+  </section>
+
+  <section id="adopt" class="adopt-section">
+    <h2>Animais Disponíveis para Adoção</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.f4e9871cb263edd671c4221a8c0bdb1a?rik=bUmDlyWa%2b%2fzXoQ&pid=ImgRaw&r=0" alt="papagaio">
+        <h3>Loro José</h3>
+        <p>Idade: 40 anos</p>
+        <p>Local: Rolim de Moura-RO</p>
+        <button class="btn">Adotar</button>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP._6LEl236cumJfTAg6GVDKQHaEK?rs=1&pid=ImgDetMain" alt="Cachorro">
+        <h3>Viralata Caramelo</h3>
+        <p>Idade: 1 ano</p>
+        <p>Local: Esquina da sua casa</p>
+        <button class="btn">Adotar</button>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.tPd2VJkGCqkKmylMx_iaWAHaFj?rs=1&pid=ImgDetMain" alt="Gato">
+        <h3>Alfredo</h3>
+        <p>Idade: 8 meses</p>
+        <p>local: Extrema</p>
+        <button class="btn">Adotar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contato</h2>
+    <form>
+      <input id="nome" type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu email" required>
+      <input type="text" placeholder="Seu telefone">
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<div class="modal-overlay"></div>
+<div class="modal">
+  <button class="close" onclick="closeModal()">&times;</button>
+  <h2>Login</h2>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Senha">
+  <button class="btn" id="loginSubmit">Entrar</button>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
